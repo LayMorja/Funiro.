@@ -1,0 +1,201 @@
+//====================================================================================================
+.footer {
+   &__container {
+   }
+
+   &__body {
+      border-top: 1px solid #d8d8d8;
+      display: grid;
+      grid-template-columns: rem(250) 1fr rem(290);
+      @include adaptiveValue('padding-top', 80, 30);
+      @include adaptiveValue('padding-bottom', 60, 30);
+      @include adaptiveValue('column-gap', 80, 0);
+
+      @media (max-width: $pc) {
+         grid-template-rows: auto auto;
+         grid-template-columns: 1fr rem(290);
+      }
+      @media (max-width: $tablet) {
+         display: block;
+      }
+   }
+
+   &__main {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      color: $darkColor;
+      line-height: 150%;
+      @media (max-width: $pc) {
+         grid-column: span 2;
+         @include adaptiveValue('margin-bottom', 40, 25);
+      }
+   }
+
+   &__logo {
+      &:not(:last-child) {
+         margin-bottom: em(16, 24);
+      }
+   }
+
+   &__text {
+      &:not(:last-child) {
+         margin-bottom: em(16);
+      }
+   }
+
+   &__contacts {
+   }
+
+   &__menu {
+      @media (max-width: $tablet) {
+         @include adaptiveValue('margin-bottom', 40, 25);
+      }
+   }
+
+   &__subscribe {
+   }
+}
+
+//====================================================================================================
+.contacts-footer {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   &__item {
+      display: inline-flex;
+      align-items: center;
+      gap: rem(8);
+      transition: color 0.3s ease;
+      &:hover {
+         color: $orangeColor;
+      }
+      &:not(:last-child) {
+         @include adaptiveValue('margin-bottom', 16, 10);
+      }
+   }
+}
+
+//====================================================================================================
+.menu-footer {
+   @media (min-width: $mobile) {
+      display: flex;
+   }
+   &__column {
+      @media (min-width: $mobile) {
+         flex: 0 1 33.33333%;
+      }
+      @media (max-width: $tablet) {
+         @include adaptiveValue('margin-bottom', 30, 15);
+      }
+   }
+
+   &__title {
+      cursor: default;
+      @media (min-width: $tablet) {
+         margin: 0px 0px em(16, 24) 0px;
+      }
+      ._spoller-init & {
+         display: flex;
+         align-items: center;
+         width: 100%;
+         flex-direction: row-reverse;
+         justify-content: space-between;
+         &::before {
+            content: '\e900';
+            @extend %ic;
+            font-size: rem(11);
+            transition: transform 0.4s ease;
+         }
+      }
+      &._spoller-active {
+         &::before {
+            transform: rotate(-180deg);
+         }
+      }
+   }
+
+   &__list {
+      @media (max-width: $tablet) {
+         padding: rem(10) 0px 0px 0px;
+      }
+   }
+
+   &__item {
+      &:not(:last-child) {
+         margin-bottom: rem(15);
+      }
+   }
+
+   &__link {
+      color: $darkColor;
+      transition: color 0.3s ease;
+      line-height: 120%;
+      font-weight: 500;
+      &:hover {
+         color: $orangeColor;
+      }
+   }
+}
+
+//====================================================================================================
+.subscribe-footer {
+   &__title {
+      @media (min-width: $tablet) {
+         margin: 0px 0px em(16, 24) 0px;
+      }
+   }
+
+   &__form {
+      display: flex;
+      position: relative;
+      .form__error {
+         font-size: rem(14);
+         color: darkRed;
+         position: absolute;
+         top: 100%;
+         margin: rem(3) 0px 0px 0px;
+         left: rem(12);
+      }
+      @media (max-width: $tablet) {
+         padding: rem(10) 0px 0px 0px;
+      }
+   }
+
+   &__input {
+      width: 100%;
+      padding: 0 rem(12);
+      background-color: #f4f5f7;
+      color: $darkColor;
+      position: relative;
+      &::placeholder {
+         color: #828282;
+      }
+      outline: none;
+   }
+
+   &__button {
+      flex: 0 0 rem(45);
+      height: rem(45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: rem(18);
+      background-color: $orangeColor;
+      color: #fff;
+      margin: 0px 0px 0px rem(4);
+      transition: all 0.3s ease;
+      &:hover {
+         background-color: #e0996d;
+         box-shadow: 0 0 rem(2) #c78861;
+         transform: translateY(rem(-2));
+      }
+      &:active {
+         background-color: #df7331;
+         box-shadow: 0 0 rem(2) #df7331;
+         transform: translateY(0);
+      }
+   }
+}
+
+//====================================================================================================

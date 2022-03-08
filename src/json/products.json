@@ -1,0 +1,61 @@
+{
+   "products": [
+      {
+         "id": 5,
+         "url": "#",
+         "title": "Grifo",
+         "text": "Night Lamp",
+         "labels": "",
+         "image": "05.jpg",
+         "price": "1.500.000",
+         "priceOld": "",
+         "shareURL": "",
+         "likeURL": ""
+      },
+      {
+         "id": 6,
+         "url": "#",
+         "title": "Muggo",
+         "text": "Small mug",
+         "labels": [
+            {
+               "type": "new",
+               "value": "New"
+            },
+            {
+               "type": "sale",
+               "value": "-50%"
+            }
+         ],
+         "image": "06.jpg",
+         "price": "150.000",
+         "priceOld": "",
+         "shareURL": "",
+         "likeURL": ""
+      },
+      {
+         "id": 7,
+         "url": "#",
+         "title": "Grifo",
+         "text": "Night Lamp",
+         "labels": "",
+         "image": "07.jpg",
+         "price": "1.500.000",
+         "priceOld": "",
+         "shareURL": "",
+         "likeURL": ""
+      },
+      {
+         "id": 8,
+         "url": "#",
+         "title": "Grifo",
+         "text": "Night Lamp",
+         "labels": "",
+         "image": "08.jpg",
+         "price": "1.500.000",
+         "priceOld": "",
+         "shareURL": "",
+         "likeURL": ""
+      }
+   ]
+}
